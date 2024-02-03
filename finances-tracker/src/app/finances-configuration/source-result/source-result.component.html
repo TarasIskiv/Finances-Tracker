@@ -1,0 +1,9 @@
+<div class="content">
+    <p>{{sourceType}}</p>
+    <div *ngIf="sources.length > 0; else emptySources">
+        hello
+    </div>
+    <ng-template #emptySources>
+        You need to have at least one source
+    </ng-template>
+</div>

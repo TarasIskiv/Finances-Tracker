@@ -1,0 +1,5 @@
+<div class="d-flex justify-content-between">
+    <div *ngFor="let type of sourceTypes">
+        <app-source-result [sourceType]="type" [sources]="getSourcesByType(type)"></app-source-result>
+    </div>
+</div>
