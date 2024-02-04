@@ -1,5 +1,5 @@
 export enum SourceType
 {
-    Income = 'income',
-    Outcome = 'outcome'
+    Income = 'Income',
+    Outcome = 'Outcome'
 }
