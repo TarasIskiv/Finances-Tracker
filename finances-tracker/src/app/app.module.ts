@@ -13,6 +13,10 @@ import { ChartsListComponent } from './charts/charts-list/charts-list.component'
 import { ChartComponent } from './charts/chart/chart.component';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +33,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
     NgbModule,
     MatChipsModule,
     CanvasJSAngularChartsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [SourceState],
   bootstrap: [AppComponent]
