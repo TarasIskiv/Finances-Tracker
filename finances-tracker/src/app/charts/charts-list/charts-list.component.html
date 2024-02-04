@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <app-chart [chartTitle]="'Incomes'" [originData]="getSourcesByType(sourceTypeRes.Income)"></app-chart>
+      </div>
+      <div class="col-sm">
+        <app-chart [chartTitle]="'Outcomes'" [originData]="getSourcesByType(sourceTypeRes.Outcome)"></app-chart>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-sm">
+            <app-chart [chartTitle]="'Month Details'" [isTotalResult]="true" [originData]="getAllSources()"></app-chart>
+        </div>
+    </div>
+  </div>

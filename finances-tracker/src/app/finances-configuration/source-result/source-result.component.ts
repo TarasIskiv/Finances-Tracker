@@ -11,7 +11,7 @@ export class SourceResultComponent
 {
   @Input() sourceType: SourceType = SourceType.Income;
   @Input() sources: Array<SourceDetails> = [];
-
+  color: string = 'primary'
   get getDistinctSourceTags()
   {
     return [... new Set(this.sources.map(source => source.tag))];
