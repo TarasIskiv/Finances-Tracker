@@ -19,6 +19,7 @@ export class ChartComponent implements OnInit  {
 
   ngOnInit(): void 
   {
+    this.filterOriginData();
     this.setBorderDates();
     if(this.isTotalResult)
     {
@@ -114,5 +115,11 @@ export class ChartComponent implements OnInit  {
     var date = this.originData[0].transactionDate;
     this.firstDate = new Date(date.getFullYear(), date.getMonth(), 1);
     this.lastDate = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+  }
+
+  private filterOriginData()
+  {
+    var currentMonth = new Date().getMonth;
+    this.originData = this.originData.filter(x => x.transactionDate.getMonth === currentMonth);
   }
 }
