@@ -16,6 +16,10 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { UpsertSourceComponent } from './finances-configuration/dialogs/upsert-source/upsert-source.component';
+import { SourceListComponent } from './finances-configuration/dialogs/source-list/source-list.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
 @NgModule({
@@ -25,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     FinancesSettingsComponent,
     SourceResultComponent,
     ChartsListComponent,
-    ChartComponent
+    ChartComponent,
+    UpsertSourceComponent,
+    SourceListComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +42,10 @@ import { FormsModule } from '@angular/forms';
     MatGridListModule,
     MatSelectModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule
   ],
-  providers: [SourceState],
+  providers: [SourceState, provideAnimationsAsync()],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>{{getSourceOperation}}&nbsp;Source </h2>
+<mat-dialog-content>
+    <div class="w-100">
+        <label>Name</label>
+        <input type="text" placeholder="Ex. Groceries" [(ngModel)]="source.name" >
+        <label>Amount</label>
+        <input type="number" min="0" placeholder="Ex. Groceries" [(ngModel)]="source.amount">
+        <label>Tag</label>
+        <input type="text" placeholder="Ex. Groceries" [(ngModel)]="source.tag">
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions class="buttons d-flex justify-content-between w-100">
+    <button class="btn btn-primary" mat-button (click)="close()">Close</button>
+    <button class="btn btn-primary" [disabled]="isSaveDisabled()" mat-button (click)="saveChanges()">Save</button>
+</mat-dialog-actions>
