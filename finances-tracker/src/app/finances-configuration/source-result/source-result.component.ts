@@ -51,7 +51,7 @@ export class SourceResultComponent
     const dialogRef = this.dialog.open(UpsertSourceComponent, 
       {
         
-        data: {sources: null, sourceType: this.sourceType},
+        data: {source: null, sourceType: this.sourceType},
       
         width: '400px',
         height: '400px'

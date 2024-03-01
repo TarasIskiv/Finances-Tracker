@@ -13,7 +13,7 @@ export class UpsertSourceComponent
 {
   isNewSource: boolean = false;
   source: SourceDetails;
-
+  private originSource: SourceDetails;
   constructor(
     public dialogRef: MatDialogRef<UpsertSourceComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -21,7 +21,7 @@ export class UpsertSourceComponent
   ) 
   {
     this.isNewSource = !data.source;
-    this.source = this.isNewSource ? new SourceDetails('', 0, data.sourceType, '', new Date()) : data.source;
+    this.source = this.originSource = this.isNewSource ? new SourceDetails('', 0, data.sourceType, '', new Date()) : data.source;
   }
 
   get getSourceOperation()
@@ -54,7 +54,8 @@ export class UpsertSourceComponent
 
   private updateSource()
   {
-
+    this.sourceState.removeSource(this.originSource);
+    this.sourceState.addSource(this.source);
   }
 
   close()
